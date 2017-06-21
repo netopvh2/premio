@@ -28,6 +28,7 @@ class NewRegister extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.register');
+        return $this->subject('Novo Inscrito Prêmio Fiero')
+            ->markdown('emails.register');
     }
 }

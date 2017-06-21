@@ -30,6 +30,7 @@ class SendContact extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.contact', $this->sender);
+        return $this->subject('Contato Portal Premio Fiero')
+            ->markdown('emails.contact', $this->sender);
     }
 }

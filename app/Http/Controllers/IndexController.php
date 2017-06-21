@@ -29,8 +29,8 @@ class IndexController extends Controller
     public function register(Request $request)
     {
         if ($this->repository->create($request->all())){
-            Mail::to($request->EMAIL)->queue(new ConfirmRegister($request->all()));
-            Mail::to('angelo.neto@fiero.org.br')->queue(new NewRegister());
+            Mail::to($request->get('EMAIL'))->queue(new ConfirmRegister($request->all()));
+            Mail::to('comunicacao.fiero@fiero.org.br')->queue(new NewRegister());
 
             alert()->success('Sua inscrição foi efetuada com sucesso!', 'Registro efetuado!');
             return redirect()->route('index');
@@ -42,7 +42,7 @@ class IndexController extends Controller
 
     public function contact(Request $request)
     {
-        Mail::to('angelo.neto@fiero.org.br')->queue(new SendContact($request->all()));
+        Mail::to('comunicacao.fiero@fiero.org.br')->queue(new SendContact($request->all()));
 
         alert()->success('Logo entraremos em contato com você.', 'Contato enviado!');
 

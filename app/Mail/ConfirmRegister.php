@@ -30,6 +30,7 @@ class ConfirmRegister extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.confirm', $this->sender);
+        return $this->subject('Inscrição realizada')
+        ->markdown('emails.confirm', $this->sender);
     }
 }
