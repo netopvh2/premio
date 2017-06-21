@@ -1,0 +1,25 @@
+{
+  "name": "premio",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "datatables-responsive": "~1.0.3",
+    "datatables-plugins": "~1.0.1",
+    "flot": "~0.8.3",
+    "flot.tooltip": "~0.8.4",
+    "bootstrap-social": "~4.8.0",
+    "holderjs": "~2.4.1",
+    "morrisjs": "~0.5.1",
+    "metisMenu": "~1.1.3"
+  }
+}
